@@ -1,9 +1,9 @@
 
-# sbueringer-hubot-matteruser
+# hubot-sbueringer-matteruser
 
 **Hubot** is "chat bot" created by GitHub that listens for commands and executes actions based on your requests. 
 
-`sbueringer-hubot-matteruser` is a Hubot adapter for [Mattermost](https://about.mattermost.com/) written in coffee script that uses the Mattermost [Web Services API](https://api.mattermost.com/) and WebSockets to deliver Hubot functionality. 
+`hubot-sbueringer-matteruser` is a Hubot adapter for [Mattermost](https://about.mattermost.com/) written in coffee script that uses the Mattermost [Web Services API](https://api.mattermost.com/) and WebSockets to deliver Hubot functionality. 
 
 - Learn more about [Hubot in Wired Magazine](https://www.wired.com/2015/10/the-most-important-startups-hardest-worker-isnt-a-person/)
 - Learn more about [Mattermost as an open source, self-hosted team communication server](https://about.mattermost.com/)
@@ -44,7 +44,7 @@ Clone this repository, then build the Hubot-Matteruser container:
 docker build --build-arg hubot_owner=<owner> \
              --build-arg hubot_name=<name> \
              --build-arg hubot_description=<desc> \
-             --tag=sbueringer-hubot-matteruser \
+             --tag=hubot-sbueringer-matteruser \
              .
 ```
 
@@ -57,8 +57,8 @@ docker run -it \
            --env MATTERMOST_USER=<mm_user_email> \
            --env MATTERMOST_PASSWORD=<mm_user_password> \
            -p 8080:8080 \
-           --name sbueringer-hubot-matteruser \
-           sbueringer-hubot-matteruser
+           --name hubot-sbueringer-matteruser \
+           hubot-sbueringer-matteruser
 ```
 
 ### Docker Compose
@@ -80,13 +80,13 @@ If you just want to test locally, you can find [here](https://github.com/banzo/m
 
 Follow the [Mattermost install guides](https://docs.mattermost.com/guides/administrator.html#install-guides) to set up the latest version of Mattermost 3.7.x.
 
-**IMPORTANT:** Make sure your `sbueringer-hubot-matteruser` and `sbueringer-mattermost-client` versions **match** the major version of your Mattermost server so the API versions will match. 
+**IMPORTANT:** Make sure your `hubot-sbueringer-matteruser` and `sbueringer-mattermost-client` versions **match** the major version of your Mattermost server so the API versions will match. 
 
-For example, if you're using Mattermost server version 3.7.2 the _major version_ is "3.7", and it is highly recommended to use version 3.7.x of `sbueringer-hubot-matteruser` and `sbueringer-mattermost-client`. See [releases archive](https://github.com/sbueringer/sbueringer-hubot-matteruser/releases) for older versions. 
+For example, if you're using Mattermost server version 3.7.2 the _major version_ is "3.7", and it is highly recommended to use version 3.7.x of `hubot-sbueringer-matteruser` and `sbueringer-mattermost-client`. See [releases archive](https://github.com/sbueringer/hubot-sbueringer-matteruser/releases) for older versions. 
 
-### 2) Install sbueringer-hubot-matteruser
+### 2) Install hubot-sbueringer-matteruser
 
-On a separate server, install `sbueringer-hubot-matteruser` using the following commands: 
+On a separate server, install `hubot-sbueringer-matteruser` using the following commands: 
 
   ```sh
 npm install -g yo generator-hubot
@@ -126,12 +126,12 @@ export MATTERMOST_PASSWORD=s3cr3tP@ssw0rd!
 
 ## Upgrade
 
-To upgrade your Hubot for Mattermost 3.7.x, find the `package.json` file in your Hubot directory and look for the line in the `dependencies` section that references `sbueringer-hubot-matteruser`. Change the verion so it points to `^3.7.3` of the client. Example:
+To upgrade your Hubot for Mattermost 3.7.x, find the `package.json` file in your Hubot directory and look for the line in the `dependencies` section that references `hubot-sbueringer-matteruser`. Change the verion so it points to `^3.7.3` of the client. Example:
 
   ```json
     ...
     "dependencies": {
-      "sbueringer-hubot-matteruser": "^3.7.3"
+      "hubot-sbueringer-matteruser": "^3.7.3"
     },
     ...
   ```
