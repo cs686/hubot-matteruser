@@ -1,32 +1,28 @@
 {
-  "name": "hubot-matteruser",
+  "name": "sbueringer-hubot-matteruser",
   "version": "3.7.3",
-  "author": {
-    "name": "Andy Lo-A-Foe",
-    "url": "https://aemian.com/"
-  },
+  "author": "Stefan Bueringer <npm.sbueringer@gmail.com>",
   "contributors": [],
   "description": "Mattermost Adapter",
   "keywords": [
     "hubot",
     "adapter",
     "mattermost",
-    "slack",
     "chat"
   ],
+  "main": "./src/matteruser",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loafoe/hubot-matteruser.git"
+    "url": "https://github.com/sbueringer/hubot-matteruser.git"
   },
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/loafoe/hubot-matteruser/issues",
-    "email": "support@aemian.com"
+    "url": "https://github.com/sbueringer/hubot-matteruser/issues"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1"
   },
-  "main": "./src/matteruser",
   "dependencies": {
     "mattermost-client": "^3.7.3",
     "parent-require": "^1.0.0",
