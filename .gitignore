@@ -29,3 +29,4 @@ node_modules
 
 # compiled js
 src/*.js
+src/*.js.map

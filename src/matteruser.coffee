@@ -17,6 +17,7 @@ class Matteruser extends Adapter
         mmWSSPort = process.env.MATTERMOST_WSS_PORT or '443'
         mmHTTPPort = process.env.MATTERMOST_HTTP_PORT or null
         @mmNoReply = process.env.MATTERMOST_REPLY == 'false'
+        @mmUserWhiteList = process.env.MATTERMOST_USER_WHITE_LIST?.split(',') or []
         @mmIgnoreUsers = process.env.MATTERMOST_IGNORE_USERS?.split(',') or []
 
         unless mmHost?
@@ -162,6 +163,11 @@ class Matteruser extends Adapter
             @client.customMessage(postData, postData.channel_id)
 
     message: (msg) =>
+        if @mmUserWhiteList.length > 0
+          if msg.data.sender_name not in @mmUserWhiteList
+            @robot.logger.info "User #{msg.data.sender_name} is not on MATTERMOST_USER_WHITE_LIST, ignoring them."
+            return
+
         if msg.data.sender_name in @mmIgnoreUsers
           @robot.logger.info "User #{msg.data.sender_name} is in MATTERMOST_IGNORE_USERS, ignoring them."
           return
