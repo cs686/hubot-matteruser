@@ -1,6 +1,6 @@
 {
   "name": "hubot-sbueringer-matteruser",
-  "version": "3.7.3",
+  "version": "4.0.0",
   "author": "Stefan Bueringer <npm.sbueringer@gmail.com>",
   "contributors": [],
   "description": "Mattermost Adapter",
@@ -24,7 +24,7 @@
     "coffee-script": "~1.7.1"
   },
   "dependencies": {
-    "mattermost-client": "^3.7.3",
+    "sbueringer-mattermost-client": "^4.0.0",
     "parent-require": "^1.0.0",
     "q": "^1.4.1"
   }
