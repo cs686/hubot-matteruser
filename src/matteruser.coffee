@@ -1,6 +1,6 @@
 {Robot,Adapter,TextMessage,User,EnterMessage,LeaveMessage} = require 'hubot'
 
-MatterMostClient = require 'mattermost-client'
+MatterMostClient = require 'sbueringer-mattermost-client'
 
 class AttachmentMessage extends TextMessage
 

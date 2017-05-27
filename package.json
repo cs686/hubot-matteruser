@@ -1,6 +1,6 @@
 {
   "name": "hubot-sbueringer-matteruser",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "author": "Stefan Bueringer <npm.sbueringer@gmail.com>",
   "contributors": [],
   "description": "Mattermost Adapter",
